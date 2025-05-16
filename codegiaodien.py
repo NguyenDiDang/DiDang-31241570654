@@ -6,13 +6,11 @@ from ultralytics import YOLO
 from PIL import Image
 
 # Load YOLOv8 model
-yolo_model = YOLO("/kaggle/working/yolov8s.pt")
+yolo_model = YOLO("yolov8s.pt")
 
-# Convert .h5 to .tflite (if needed)
-keras_model_path = "/kaggle/working/trainCNN/final_model.h5"
-tflite_model_path = "/kaggle/working/trainCNN/final_model.tflite"
+keras_model_path = "final_model.h5"
+tflite_model_path = "final_model.tflite"
 
-# Convert only if .tflite doesn't exist
 import os
 if not os.path.exists(tflite_model_path):
     model = tf.keras.models.load_model(keras_model_path)
