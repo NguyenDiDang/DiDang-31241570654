@@ -1,4 +1,5 @@
-!pip install gradio # Colab or (%)pip install gradio (kaggle)
+!pip install -q gradio ultralytics tensorflow pillow opencv-python matplotlib # colab
+# !pip install gradio ultralytics tensorflow pillow opencv-python matplotlib dành cho kaggle
 import gradio as gr
 import cv2
 import numpy as np
