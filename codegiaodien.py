@@ -1,3 +1,4 @@
+!pip install gradio # Colab or (%)pip install gradio (kaggle)
 import gradio as gr
 import cv2
 import numpy as np
